@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black ; color: white;">
+    
+</body>
+<script>
+    const div = document.createElement("div"); // that way we can create an element in a web page but be in mind that the div or that particular eelements are stored in the memory now
+    console.log(div);
+
+    div.className="mydiv"; // adding class to that div element
+    div.id = Math.round(Math.random() * 10 + 1) // using the MAth.random we are generating a arandom value and setting it as an id
+    div.setAttribute("Title", "generate titile") // we add an title in that div
+    // weaddeda bitof styling
+    div.style.backgroundColor = "green" 
+    div.style.padding = "12px";
+
+    // now we adding some text we have 2 method of adding
+    //first
+    ///div.innerText = "Chai aur Code";
+
+    // second Creating a tect nose abd then append it
+    const addText = document.createTextNode("Chai aur Code")
+    div.appendChild(addText)
+
+    // mow for the final part we nned add this div from the memory to our fontwebpage
+
+    document.body.appendChild(div) //using the same method as before
+
+
+
+</script>
+</html>

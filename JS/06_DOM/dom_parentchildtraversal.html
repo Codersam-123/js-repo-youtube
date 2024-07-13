@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | Parent and Child traversal</title>
+</head>
+<body style="background-color: black ; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+    
+</body>
+<script>
+    const parent = document.querySelector(".parent");
+    console.log(parent);
+    console.log(parent.children);  // we will get an html collection almost an array like property
+    console.log(parent.children[1]); // this way we can access the items in an html collection
+    //console.log(parent.children[1].innerHTML); // this printthe div inner html or the text but bw in mind that innerHTML and innerText works differently
+
+    // now to print all the elements together uaing a for loop 
+    for (let index = 0; index < parent.children.length; index++) {
+        console.log(parent.children[index].innerHTML);
+    }
+    parent.children[1].style.color = "orange";
+    console.log(parent.children[1]); // as we can see the style has been implemented in that specifc div
+
+    // there also a way to move from parent to child 
+    console.log(parent.firstElementChild); // to access the first child of that parent element
+    console.log(parent.lastElementChild); // same way the last element
+
+    const dayOne = document.querySelector(".day")
+    console.log(dayOne); // because we didn't used querySelectorAll method then onlt the first div will get selected
+
+    //console.log(dayOne.parentElement); // this method helps to select the parent class
+    //console.log(dayOne.nextElementSibling); // this property will the next divs or siblings of the first child div
+
+    console.log("Nodes: ", parent.childNodes); // this will give me the entire node list. The nodelist will consist of 9 elements its's tree like structure. Here every line break will be defined as text.
+
+</script>
+</html>
