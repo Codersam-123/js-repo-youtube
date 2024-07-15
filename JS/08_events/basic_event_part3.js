@@ -1,3 +1,4 @@
+//Async Js functions
 //setInterval()
 // this function only stops for a quick interval and then keep executing the function again and again 
 // we can also pass parameters
